@@ -18,9 +18,7 @@ def main():
 def Decifrar_cesar_dinamico():
     input_text = input("Ingrese el texto a descifrar (solo letras mayúsculas): ").upper()
     K = int(input("Ingrese la clave dinámica (un número entero rango 0-25): "))
-    clave = K % 26  # Asegurar que la clave esté en el rango [0, 25]
-    resultado = ""
-    
+    clave = K
     for char in input_text:
         if char.isalpha():
             C = ord(char) - ord('A')
@@ -45,7 +43,9 @@ def cifrar_cesar_dinamico():
         else:
             resultado += char
     
-    print(resultado)
+    print(resultado) % 26  # Asegurar que la clave esté en el rango [0, 25]
+    resultado = ""
+    
 
 if __name__ == "__main__":
     main()

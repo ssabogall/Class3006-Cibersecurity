@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cifrado César</title>
+</head>
+<body>
+    <h1>Cifrado César</h1>
+    <form method="post">
+        <input type="text" name="texto" placeholder="texto a cifrar (solo mayúsculas):">
+        <input type="number" name="clave" placeholder="Clave">
+        <button type="submit" name="accion" value="cifrar">Cifrar</button>
+    </form>
+
+    <h1>Descifrado César</h1>
+    <form method="post">
+        <input type="text" name="texto" placeholder="texto a descifrar (solo mayúsculas):">
+        <input type="number" name="clave" placeholder="Clave">
+        <button type="submit" name="accion" value="descifrar">Descifrar</button>
+    </form>
+
+    {% if resultado is not none %}
+        <h2>Resultado:</h2>
+        <p>{{ resultado }}</p>
+    {% endif %}
+</body>
+</html>
