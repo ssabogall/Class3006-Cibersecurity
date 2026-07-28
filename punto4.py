@@ -7,7 +7,7 @@
 
 
 def main():
-    opcion = input("Ingrese 'C' para cifrar o 'D' para Descifrar: ").lower()
+    opcion = input("Ingrese 'C' para cifrar o 'D' para Descifrar: ")
     if opcion == 'C':
         cifrar_cesar_dinamico()
     elif opcion == 'D':
